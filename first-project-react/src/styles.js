@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Background from "./Assets/bg image1.svg";
+
 export const Container = styled.div`
   background: url("${Background}");
   background-size: cover;
@@ -75,29 +76,37 @@ export const Input = styled.input`
 `;
 
 export const Button = styled.button`
-  border: none;
-  color: #ffffff;
   width: 342px;
   height: 74px;
+
+  background: rgba(0, 0, 0, 0.8);
   border-radius: 14px;
-  background: var(--templates-5-color-1, rgba(0, 0, 0, 0.8));
+  border: none;
+
+  color: #ffffff;
 
   cursor: pointer;
-  color: #fff;
-  font-family: Roboto;
-  font-size: 17px;
-  font-style: normal;
+  font-size: normal;
   font-weight: 700;
-  line-height: 28px; /* 164.706% */
+  font-size: 17px;
+  line-height: 28px;
+  font-style: normal;
 
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 20px;
+
+  &:hover {
+    opacity: 0.8;
+  }
+  &:active {
+    opacity: 0.5;
+  }
 `;
 
 export const User = styled.li`
-margin-top: 20px;
+  margin-top: 20px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -118,19 +127,17 @@ margin-top: 20px;
   line-height: normal;
 
   p {
-    
-  color: #fff;
-  /* font-family: Roboto; */
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
+    color: #fff;
+    /* font-family: Roboto; */
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
   }
 
   button {
-        background: none;
-        border: none;
-        cursor: pointer;
-
+    background: none;
+    border: none;
+    cursor: pointer;
   }
 `;
