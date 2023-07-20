@@ -15,10 +15,14 @@
 
 */
 const uuid = require("uuid");
-const express = require("express");
 
+const express = require("express");
 const app = express();
+const cors = require('cors');
+app.use(cors({ origin: '*' }));
+
 app.use(express.json());
+
 
 const users = [];
 
@@ -47,9 +51,11 @@ app.get("/users", (request, response) => {
 app.use(myFirstMiddleware);
 
 app.post("/users", (request, response) => {
+  
   const { name, age } = request.body;
 
   const user = { id: uuid.v4(), name, age };
+  console.log(user)
   users.push(user);
   return response.status(201).json(users);
 });
@@ -75,6 +81,6 @@ app.delete("/users/:id", checkUserId, (request, response) => {
   return response.status(204).json();
 });
 
-app.listen(3000, () => {
-  console.log(`🚀 server started on port 3000`);
+app.listen(3001, () => {
+  console.log(`🚀 server started on port 3001`);
 });

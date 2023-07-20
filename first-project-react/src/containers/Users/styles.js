@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import Background from "../../Assets/bg image2.svg";
-import { Link } from "react-router-dom";
 
 export const Container = styled.div`
   background: url("${Background}");
@@ -10,43 +9,17 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 40px;
-  height: 100vh;
+  height: 100%;
+  min-height: 100vh;
 `;
 
 export const Imagem = styled.img`
   margin-top: 30px;
 `;
 
-export const ContainerItens = styled.div`
-  height: 100vh;
-  border-radius: 61px 61px 0px 0px;
-  backdrop-filter: blur(22.5px);
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.6) 0%,
-    rgba(255, 255, 255, 0.6) 0.01%,
-    rgba(255, 255, 255, 0.15) 100%
-  );
 
-  padding: 50px 36px;
 
-  display: flex;
-  flex-direction: column;
-`;
-
-export const H1 = styled.h1`
-  font-style: normal;
-  font-weight: 700;
-  font-size: 34px;
-  line-height: normal;
-  text-align: center;
-
-  color: #ffffff;
-
-  margin-bottom: 80px;
-`;
-
-export const Button = styled(Link)`
+export const Button = styled.button`
   width: 342px;
   height: 74px;
   margin-top: 120px;
