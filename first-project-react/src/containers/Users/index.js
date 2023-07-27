@@ -21,7 +21,7 @@ const Users = () => {
       console.log(`fui chamado`);
     }
     fetchUsers();
-  }, []);
+  }, [users]);
 
   function goBackPage() {
     history.goBack();
