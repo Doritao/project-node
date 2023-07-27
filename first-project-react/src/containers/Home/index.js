@@ -10,9 +10,8 @@ import {
   Imagem,
   InputLabel,
   Input,
-  Button,
 } from "./styles";
-
+import Button from '../../Components/Button'
 
 import H1 from "../../Components/Title"
 
@@ -29,7 +28,7 @@ const App = () => {
       age: inputAge.current.value,
     });
     setUsers([...users, ...newUser]);
-    history.goBack();
+    history.push('/Usuarios');
   }
 
   return (

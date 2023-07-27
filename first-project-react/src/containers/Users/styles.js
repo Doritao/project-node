@@ -19,40 +19,7 @@ export const Imagem = styled.img`
 
 
 
-export const Button = styled.button`
-  width: 342px;
-  height: 74px;
-  margin-top: 120px;
-  background: transparent;
-  border-radius: 14px;
-  border: 1px solid #fff;
 
-  color: #ffffff;
-
-  cursor: pointer;
-  text-decoration: none;
-  font-size: normal;
-  font-weight: 700;
-  font-size: 17px;
-  line-height: 28px;
-  font-style: normal;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-
-  &:hover {
-    opacity: 0.8;
-  }
-  &:active {
-    opacity: 0.5;
-  }
-
-  img {
-    transform: scaleX(-1);
-  }
-`;
 
 export const User = styled.li`
   margin-top: 20px;

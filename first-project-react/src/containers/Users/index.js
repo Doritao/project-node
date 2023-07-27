@@ -5,7 +5,8 @@ import axios from "axios";
 import People from "../../Assets/Avatar.svg";
 import Arrow from "../../Assets/arrow.svg";
 import Trash from "../../Assets/Trashbin.svg";
-import { Container, Imagem, Button, User } from "./styles";
+import { Container, Imagem, User } from "./styles";
+import Button from '../../Components/Button'
 import ContainerItens from '../../Components/Container Itens'
 import H1 from '../../Components/Title'
 const Users = () => {
@@ -23,7 +24,7 @@ const Users = () => {
   }, []);
 
   function goBackPage() {
-    history.push("/");
+    history.goBack();
   }
 
   async function deleteUser(userId) {
@@ -48,7 +49,7 @@ const Users = () => {
             </User>
           ))}
         </ul>
-        <Button onClick={goBackPage}>
+        <Button isBack={true} onClick={goBackPage}>
           <img alt="seta" src={Arrow}></img> Voltar
         </Button>
       </ContainerItens>
